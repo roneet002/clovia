@@ -1,0 +1,3 @@
+.card{background-color:#f2f2f2;border: 1px solid #ccc;width: 70%;margin: 20px auto;padding:20px;position: relative;}
+.closeBtn{position: absolute;right:-12px;top:-14px;border:1px solid #ccc;padding:7px 10px;border-radius:50%;line-height:18px;background: #fff;;cursor: pointer;}
+.card .form-control{margin: auto;width:50%}

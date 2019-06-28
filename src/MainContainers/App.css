@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700&display=swap');
+body{font-family: 'Roboto Slab', serif;font-weight: 400}
+
+.App {font-family: Roboto Slab}
+
+.PrimaryColor{color:#34495e}
+.PrimaryBgColor{background-color:#34495e}
+.SecondaryColor{color:#fff}
+.SecondaryBgColor{background-color:#000}
+.WhColor{color: #ffff}
+.WhBgColor{background-color: #ffff}
+input {border:1px solid #d8cfcf;padding:5px}
+.BtnColor{padding: 10px;font-weight: bold;font-size:15px;margin-top:20px;}
