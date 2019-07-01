@@ -4,12 +4,11 @@ import './App.css'
 import { NavLink, Route, BrowserRouter as Router } from 'react-router-dom'
 import TopBar from '../Components/TopBar/TopBar'
 import MainContent from '../Components/MainContent/MainContent'
-
 import Product from '../Components/Product';
 import About from '../Components/About'
 import Home from '../Components/Home'
 import Contact from '../Components/Contact'
-
+import InputText from '../Components/MainContent/Forms/InputText'
 class App extends Component {
     state={
         Persons: [
@@ -17,6 +16,11 @@ class App extends Component {
             { id: 2, name: 'Mady', age: 30 },
             { id: 3, name: 'Vinay', age: 35 },
             { id: 4, name: 'Bilal', age: 32 }
+        ],
+        Placeholder: [
+            {plname:'Title'},
+            {plname:'Author'},
+            {plname:'Price'},
         ],
         showCard: false
     }
@@ -52,6 +56,11 @@ class App extends Component {
             DelPerson: DelPerson
         })
     }
+
+    SubmitHandler=()=>{
+        alert('asdgasgd')
+    }
+
     render() {
 
         let letPersonnew=null
@@ -65,8 +74,30 @@ class App extends Component {
         }
         return (
         <div className="App">
+            <div className="text-center">
+                <form className="text-center" onSubmit={this.SubmitHandler}>
+
+            {
+                this.state.Placeholder.map((pl, index)=>{
+
+                    return(
+                        <InputText plname={pl.plname} key={index} classNam=" w-25" />
+                       
+                    )
+                }
+
+
+                )}
+                 <button className="btn btn-primary w-25">Add</button>
+                 </form>
+                 <br /> <br /> <br /> <br /> <br />
+                 </div>
+
+             {/* <InputText plname={this.state.Placeholder[0].plname}/> */}
+             
+            
              <TopBar />
-<MainContent />
+            <MainContent />
             <Router>
             <div className="navbar navbar-inverse">
             <ul className="nav navbar-nav">
