@@ -57,7 +57,7 @@ class App extends Component {
         })
     }
 
-    SubmitHandler=()=>{
+    SubmitHandler=(e)=>{
         alert('asdgasgd')
     }
 
