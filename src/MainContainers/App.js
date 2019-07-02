@@ -4,12 +4,11 @@ import './App.css'
 import { NavLink, Route, BrowserRouter as Router } from 'react-router-dom'
 import TopBar from '../Components/TopBar/TopBar'
 import MainContent from '../Components/MainContent/MainContent'
-
 import Product from '../Components/Product';
 import About from '../Components/About'
 import Home from '../Components/Home'
 import Contact from '../Components/Contact'
-
+import MainForm from '../Components/MainContent/Forms/MainForm'
 class App extends Component {
     state={
         Persons: [
@@ -18,6 +17,7 @@ class App extends Component {
             { id: 3, name: 'Vinay', age: 35 },
             { id: 4, name: 'Bilal', age: 32 }
         ],
+     
         showCard: false
     }
     cardHideShowHandler=() => {
@@ -52,6 +52,8 @@ class App extends Component {
             DelPerson: DelPerson
         })
     }
+
+
     render() {
 
         let letPersonnew=null
@@ -65,8 +67,15 @@ class App extends Component {
         }
         return (
         <div className="App">
+            <div className="text-center">
+              <MainForm/>
+                 <br /> <br /> <br /> <br /> <br />
+                 </div>
+
+             
+            
              <TopBar />
-<MainContent />
+            <MainContent />
             <Router>
             <div className="navbar navbar-inverse">
             <ul className="nav navbar-nav">
