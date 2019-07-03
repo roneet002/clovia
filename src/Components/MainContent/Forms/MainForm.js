@@ -11,21 +11,23 @@ export default class MainForm extends Component {
             ]
         }  
     }
-    InputHandler=(evt)=>{
-        console.log(evt.target.value)
+    InputHandler=(evt, index)=>{
+        //console.log(evt.target.value)
         this.setState({
-            Title: evt.target.value
+            [evt.target.Title] : evt.target.value
             
          })
        
     }
-    SubmitHandler=(e)=>{
-        this.setState({
+    SubmitHandler=(evt)=>{
+        evt.preventDefault()
+    console.log(evt.target.Title.value)
 
 
-        })
-        
-        e.preventDefault()
+    this.setState({
+
+     })
+
     }
 
 
@@ -38,7 +40,7 @@ export default class MainForm extends Component {
     this.state.Placeholder.map((pl, index)=>{
 
         return(
-            <InputText plname={pl.Title} key={index} classNam="w-25" value={this.state.Title} onchange={this.InputHandler} />
+            <InputText plname={pl.Title} key={index} classNam="w-25" value={this.state.Title} onchangeHandler={this.InputHandler} />
            
         )
     }

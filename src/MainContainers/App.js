@@ -8,7 +8,8 @@ import Product from '../Components/Product';
 import About from '../Components/About'
 import Home from '../Components/Home'
 import Contact from '../Components/Contact'
-import MainForm from '../Components/MainContent/Forms/MainForm'
+// import MainForm from '../Components/MainContent/Forms/MainForm'
+ import MainFormNew from '../Components/MainContent/Forms/MainFormNew'
 class App extends Component {
     state={
         Persons: [
@@ -68,7 +69,8 @@ class App extends Component {
         return (
         <div className="App">
             <div className="text-center">
-              <MainForm/>
+              {/* <MainForm/> */}
+              <MainFormNew />
                  <br /> <br /> <br /> <br /> <br />
                  </div>
 
