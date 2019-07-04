@@ -3,7 +3,7 @@ import React from 'react'
 const InputText =(props)=>{
 return(
 <div className="form-group">
-<input type="text" placeholder={props.plname} />
+<input type="text" name={props.name} placeholder={props.plname} />
 
 </div>
 

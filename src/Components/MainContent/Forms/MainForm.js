@@ -5,44 +5,39 @@ export default class MainForm extends Component {
         super(props)
         this.state =  {
             Placeholder: [
-                {Title:'Title'},
-                {Title:'Author'},
-                {Title:'Price'},
+                {Title:'Title', name:'title'},
+                {Title:'Author',name:'author'},
+                {Title:'Price',name:'price'},
             ]
         }  
     }
     InputHandler=(evt)=>{
-        console.log(evt.target.value)
+        let msg=evt.target.value
+
         this.setState({
-            Title: evt.target.value
-            
+            Title:msg            
          })
-       
+         console.log(evt)
     }
-    SubmitHandler=(e)=>{
-        this.setState({
-
-
-        })
+    SubmitHandler=(event)=>{
         
-        e.preventDefault()
+        event.preventDefault()
+        console.log(event)
+        console.log(event.target.value)
     }
 
 
     render() {
         return (
             <div>
-                <form className="text-center" onSubmit={this.SubmitHandler}>
+                <form className="text-center"  onSubmit={(evt)=>this.SubmitHandler(evt)}>
 
-{
-    this.state.Placeholder.map((pl, index)=>{
-
+        {this.state.Placeholder.map((pl, index)=>{
         return(
-            <InputText plname={pl.Title} key={index} classNam="w-25" value={this.state.Title} onchange={this.InputHandler} />
-           
+            <InputText plname={pl.Title} name={pl.name} key={index} className="w-25"  onChange={this.InputHandler} />
         )
-    }
-    )}
+        }
+        )}
      <button className="btn btn-primary w-25" type="submit">Add</button>
      </form>
             </div>
