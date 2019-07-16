@@ -12,10 +12,14 @@ export default class MainFormNew extends Component {
                        Price:'',
                        "books":[{"Title":"react","author":"deep","price":300}]
                     }
+            this.inputElementRef = React.createRef()
            
         
     }
+componentDidMount(){
+this.inputElementRef.current.focus()
 
+}
 
     TitleHandler=(evt)=>{
     this.setState({
@@ -53,7 +57,7 @@ export default class MainFormNew extends Component {
             <div className="text-left">
             <form onSubmit={this.SubmitHandler}>
                 <div className="form-group">
-                <input type="text" className="w-25" placeholder="Enter Title" value={this.state.Title} onChange={(e)=>{this.TitleHandler(e)}} name={this.state.Title}/>
+                <input type="text" className="w-25" placeholder="Enter Title" ref={this.inputElementRef} value={this.state.Title} onChange={(e)=>{this.TitleHandler(e)}} name={this.state.Title}/>
                 </div>
                 <div className="form-group">
                 <input type="text" className="w-25" placeholder="Enter Author" value={this.state.Author} onChange={(e)=>{this.AuthorHandler(e)}} name={this.state.Author}/>
@@ -66,13 +70,13 @@ export default class MainFormNew extends Component {
           
         
 
-                <table className="table table-responsive table-bordered">
-        <tbody>
-    <tr>
-       <td>Title</td>
-       <td>Author</td>
-       <td>Price</td>
-       <td>Delete Row</td>
+                <table className="table table-responsive table-bordered w-100">
+        <tbody className="w-100">
+    <tr className="w-100">
+       <td width="25%">Title</td>
+       <td width="25%">Author</td>
+       <td width="25%">Price</td>
+       <td width="25%">Delete Row</td>
     </tr>
     {this.state.books.map((book, index)=>{
 
