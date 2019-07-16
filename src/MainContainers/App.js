@@ -7,7 +7,6 @@ import MainContent from '../Components/MainContent/MainContent'
 import Product from '../Components/Product';
 import About from '../Components/About'
 import Home from '../Components/Home'
-import Contact from '../Components/Contact'
 // import MainForm from '../Components/MainContent/Forms/MainForm'
  import MainFormNew from '../Components/MainContent/Forms/MainFormNew'
 class App extends Component {
@@ -68,12 +67,7 @@ class App extends Component {
         }
         return (
         <div className="App">
-            <div className="text-center">
-              {/* <MainForm/> */}
-              <MainFormNew />
-                 <br /> <br /> <br /> <br /> <br />
-                 </div>
-
+  
              
             
              <TopBar />
@@ -91,13 +85,17 @@ class App extends Component {
             <li>
             <NavLink to="/Product" > Product </NavLink>
             </li>
+            <li>
+            <NavLink to="/MainFormNew" > Contact </NavLink>
+            </li>
             </ul>
 
             </div>
             <Route exact path="/" component={Home} />
             <Route path="/about/" component={About} />
             <Route path="/Product/" component={Product} />
-            <Route path="/Contact/" component={Contact} />
+            <Route path="/MainFormNew/" component={MainFormNew} />
+            
             </Router> 
 
 

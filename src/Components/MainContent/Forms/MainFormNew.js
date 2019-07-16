@@ -6,38 +6,32 @@ export default class MainFormNew extends Component {
     constructor(props){
         super(props)
         this.state =  {
-            
-                       Title:'',
-                       Author:'',
-                       Price:'',
+
                        "books":[{"Title":"react","author":"deep","price":300}]
                     }
-           
-        
-    }
+     }
 
 
-    TitleHandler=(evt)=>{
-    this.setState({
-                Title:evt.target.value
-
-        })
-    }
-    AuthorHandler=(evt)=>{
+        TitleHandler=(evt)=>{
         this.setState({
-            Author:evt.target.value
-        
-        })
-    }
+                    Title:evt.target.value
+
+            })
+        }
+        AuthorHandler=(evt)=>{
+            this.setState({
+                Author:evt.target.value
+            
+            })
+        }
         PriceHandler=(evt)=>{
             this.setState({
                         Price:evt.target.value
              })
-        
-    }
+        }
 
     SubmitHandler=(evt)=>{
-     console.log(this.state)
+    // console.log(this.state)
      evt.preventDefault()
      const obj={"Title":this.state.Title,"author":this.state.Author,"price":this.state.Price};
      const allbooks=this.state.books;
@@ -45,8 +39,13 @@ export default class MainFormNew extends Component {
      this.setState({books:allbooks})
     }
 
-    DeleteHandler=()=>{
-        alert('asdgsag')
+    DeleteHandler=(e, index)=>{
+        alert('agdasgd')
+//  var c = e.state
+//  c.slice
+//  this.setState({
+//      c
+//  })
     }
     render() {
         return (
@@ -81,7 +80,7 @@ return (<TrRow
     TitleHandler = {book.Title}
     AuthorHandler = {book.author}
     PriceHandler = {book.price}
-    DeleteHandler ={this.DeleteHandler}
+    DeleteHandler ={(evt)=>{this.DeleteHandler(evt, index)}}
       
       />)
     })}

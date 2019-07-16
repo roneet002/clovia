@@ -1,6 +1,8 @@
 import React from 'react'
 import LogoBar from './LogoBar'
-import SearchBar from "../TopBar/SearchBar"
+import SearchBar from '../TopBar/SearchBar'
+import TopBar from '../TopBar/TopCart'
+
 import './MainContent.css'
 const MainContent=()=>{
 return(
@@ -14,6 +16,9 @@ return(
       
     <div className="float-left w-50">
     <SearchBar />
+    </div>
+    <div className="float-right w-25 text-right SecondaryColor">
+    <TopBar/>
     </div>
 
     </div>
