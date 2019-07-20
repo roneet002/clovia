@@ -24,9 +24,9 @@ return(
 {listItems}
 </ul>
 <ul className="lft float-right">
-<li><a href="/privateMode">DOWNLOAD THE APP</a></li>
-<li><a href="https://www.clovia.com/clovia-partnership-program/">RUN YOUR OWN BUSINESS</a></li>
-<li><a href="https://www.clovia.com/track-order/">TRACK ORDER</a></li>
+<li><a href="/downloadApp">DOWNLOAD THE APP</a></li>
+<li><a href="/runBusiness">RUN YOUR OWN BUSINESS</a></li>
+<li><a href="/TrackOrder">TRACK ORDER</a></li>
 <li><a href="/privateMode">PRIVATE MODE ?</a></li>
 </ul>
 </div>

@@ -7,19 +7,23 @@ import MainContent from '../Components/MainContent/MainContent'
 import Product from '../Components/Product';
 import About from '../Components/About'
 import Home from '../Components/Home'
+import Footer from '../Components/Footer'
 // import MainForm from '../Components/MainContent/Forms/MainForm'
  import MainFormNew from '../Components/MainContent/Forms/MainFormNew'
+ import axios from 'axios'
+
 class App extends Component {
     state={
         Persons: [
-            { id: 1, name: 'Amit Kumar', age: 27 },
-            { id: 2, name: 'Mady', age: 30 },
-            { id: 3, name: 'Vinay', age: 35 },
-            { id: 4, name: 'Bilal', age: 32 }
+            {id: 1, name:'Amit Kumar', age: 27 },
+            {id: 2, name:'Mady', age: 30 },
+            {id: 3, name:'Vinay', age: 35 },
+            {id: 4, name:'Bilal', age: 32 }
         ],
      
         showCard: false
     }
+
     cardHideShowHandler=() => {
         let showCard=!this.state.showCard
         this.setState({
@@ -54,8 +58,16 @@ class App extends Component {
     }
 
 
+    loadhandle=()=>{
+        console.log("lloaded")
+        axios.get("https://jsonplaceholder.typicode.com/todos").then((res)=>{
+            console.log(res.data)
+        }).catch((err)=>{
+            console.log(err)
+        })
+    }
     render() {
-
+        
         let letPersonnew=null
         if (this.state.showCard) {
             letPersonnew=( < div >
@@ -67,10 +79,7 @@ class App extends Component {
         }
         return (
         <div className="App">
-  
-             
-            
-             <TopBar />
+         <TopBar />
             <MainContent />
             <Router>
             <div className="navbar navbar-inverse">
@@ -86,25 +95,25 @@ class App extends Component {
             <NavLink to="/Product" > Product </NavLink>
             </li>
             <li>
-            <NavLink to="/MainFormNew" > Contact </NavLink>
+            <NavLink to="/MainFormNew" > Contact </NavLink></li>
+            <li className="fa-pull-right">
+            <NavLink onClick={ this.cardHideShowHandler } className="btn btn-primary"> Data Management Form </NavLink>
             </li>
             </ul>
 
             </div>
+         <div className="container pagesDisplay">
             <Route exact path="/" component={Home} />
             <Route path="/about/" component={About} />
             <Route path="/Product/" component={Product} />
             <Route path="/MainFormNew/" component={MainFormNew} />
-            
-            </Router> 
-
-
-            <button type="button"
-            className="BtnColor btn btn-primary"
-            onClick={ this.cardHideShowHandler } > Toggle Button </button>
-            { letPersonnew }
+            {letPersonnew}
            
-            </div>
+            <input type="button" value="Load Data" onClick={this.loadhandle} />
+            </div> 
+            </Router> 
+            <Footer />
+</div>
         )
     }
 }

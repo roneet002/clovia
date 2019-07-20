@@ -76,9 +76,9 @@ this.inputElementRef.current.focus()
           
         
 
-                <table className="table table-responsive table-bordered w-100">
+        <table className="table table-responsive table-success w-100 mt-5">
         <tbody className="w-100">
-    <tr className="w-100">
+       <tr className="w-100">
        <td width="25%">Title</td>
        <td width="25%">Author</td>
        <td width="25%">Price</td>
@@ -92,8 +92,7 @@ return (<TrRow
     AuthorHandler = {book.author}
     PriceHandler = {book.price}
     DeleteHandler ={(evt)=>{this.DeleteHandler(evt, index)}}
-      
-      />)
+    />)
     })}
    
     

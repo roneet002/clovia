@@ -8,7 +8,6 @@ const Cockpit= (props)=> props.Persons.map((personnew, index)=>{
                 age={personnew.age}
                OnDeleteHandler = {()=>props.DeleteHandlerMain(index)}
                changed={(event)=>props.nameChangeHandlerMain(event, personnew.id)}
-
         />
         )    
       })

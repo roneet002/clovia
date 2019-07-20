@@ -2,7 +2,6 @@
 body{font-family: 'Roboto Slab', serif;font-weight: 400}
 
 .App {font-family: Roboto Slab}
-
 .PrimaryColor{color:#34495e}
 .PrimaryBgColor{background-color:#34495e}
 .SecondaryColor{color:#fff}
@@ -11,3 +10,10 @@ body{font-family: 'Roboto Slab', serif;font-weight: 400}
 .WhBgColor{background-color: #ffff}
 input {border:1px solid #d8cfcf;padding:5px}
 .BtnColor{padding: 10px;font-weight: bold;font-size:15px;margin-top:20px;}
+.navbar-inverse{background-color:#283949}
+.navbar-nav{display: block !important;width: 100%}
+.navbar-nav li{float: left;padding:5px 10px}
+.navbar-nav li:last-child{float: right;padding:0}
+.navbar-nav li a{color:#fff}
+.pagesDisplay{padding:30px 0}
+.footer{background-color:#ededed; text-align: center;padding:10px;position: fixed; bottom:0;width:100%}
