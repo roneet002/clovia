@@ -20,7 +20,7 @@ class App extends Component {
             {id: 3, name:'Vinay', age: 35 },
             {id: 4, name:'Bilal', age: 32 }
         ],
-     
+        "employees":"",
         showCard: false
     }
 
@@ -59,9 +59,9 @@ class App extends Component {
 
 
     loadhandle=()=>{
-        console.log("lloaded")
-        axios.get("https://jsonplaceholder.typicode.com/todos").then((res)=>{
-            console.log(res.data)
+       
+        axios.get("http://localhost/Employee_Rest_Api/getemployee.php").then((res)=>{
+           this.setState({employees:res.data})
         }).catch((err)=>{
             console.log(err)
         })
