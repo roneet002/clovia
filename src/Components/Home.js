@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import FromSelectBox from './SelectBox/FromSelectBox/FromSelectBox'
+import ToSelectBox from './SelectBox/ToSelectBox/ToSelectBox'
 
 class Home extends Component {
     constructor(props) {
@@ -16,9 +18,10 @@ class Home extends Component {
         return (  
 
 <div>
-
+<FromSelectBox />
+<ToSelectBox />
       <div className="form-group">
-        <label htmlFor="select1" >Select1</label>
+       
         <select value={this.state.value} onChange={this.onChange.bind(this)} className="form-control">
           <option value="select">Select an Option</option>
           <option value="First">First</option>
