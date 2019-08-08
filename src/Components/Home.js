@@ -1,35 +1,29 @@
 import React, { Component } from 'react'
-import FromSelectBox from './SelectBox/FromSelectBox/FromSelectBox'
-import ToSelectBox from './SelectBox/ToSelectBox/ToSelectBox'
+import FromSelectBox from './SelectBox/FromSelectBox/FromSelectBox';
+
 
 class Home extends Component {
     constructor(props) {
         super(props);
         this.state = { 
-            value: 'select'
+          
         }
     }
-    onChange(e) {
-        this.setState({
-          value: e.target.value
-        })
+    formHandler =(event)=>{
+      console.log(this.state.value)
+      event.preventDefault()
       }
+
     render() { 
         return (  
 
 <div>
-<FromSelectBox />
-<ToSelectBox />
-      <div className="form-group">
-       
-        <select value={this.state.value} onChange={this.onChange.bind(this)} className="form-control">
-          <option value="select">Select an Option</option>
-          <option value="First">First</option>
-          <option value="Second">Second</option>
-          <option value="Third">Third</option>
-        </select>
-      </div>
-    
+<form onSubmit={this.formHandler.bind(this)}>  
+<div className="form-group">
+<FromSelectBox  />
+ </div>
+ <button type="submit">Submit</button>
+    </form>
 <h1>Home Page</h1>
 <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
