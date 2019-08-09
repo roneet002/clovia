@@ -1,0 +1,4 @@
+
+form{border:1px solid #e7e7e7;padding:15px;border-radius:3px;background-color:#eaf5ff}
+label {display: block !important;text-align: left;}
+/* input[type='text'].form-control, select.form-control{border:0;background-color: transparent} */
