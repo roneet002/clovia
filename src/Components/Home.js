@@ -5,13 +5,21 @@ import ListingResult from './ListingResult/ListingResult';
 
 
 
+
 class Home extends Component {
     constructor(props) {
         super(props);
         this.state = { 
+
          
         }
     }
+
+    formHandler =(event)=>{
+      console.log(this.state.value)
+      event.preventDefault()
+      }
+
 
     render() { 
         return (  
@@ -21,6 +29,9 @@ class Home extends Component {
  <FormTour />
 
 <ListingResult /><br /><br /><br /><br /><br />
+
+
+
 <h1>Home Page</h1>
 <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,

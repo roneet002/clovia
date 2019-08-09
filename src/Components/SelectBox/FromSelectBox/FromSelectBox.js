@@ -27,9 +27,10 @@ class FromSelectBox extends Component {
 </select>
 </Auxiliary>
 
-        );
-    }
+        )}
 }
- 
+
+
 export default FromSelectBox;
+
 
