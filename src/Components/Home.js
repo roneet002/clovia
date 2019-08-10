@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import FormTour from '../FormTour/FormTour';
+import FormTour from '../Components/FormTour/FormTour';
 import Auxiliary from '../hoc/Auxiliary';
 import ListingResult from './ListingResult/ListingResult';
 
@@ -25,6 +25,7 @@ class Home extends Component {
 
 
 
+ 
  <FormTour />
 
 <ListingResult /><br /><br /><br /><br /><br />

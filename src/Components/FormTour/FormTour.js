@@ -1,11 +1,11 @@
 import React, {Component} from 'react'
-import Auxiliary from '../hoc/Auxiliary';
-import FromSelectBox from '../Components/SelectBox/FromSelectBox/FromSelectBox';
-import ToSelectBox from '../Components/SelectBox/ToSelectBox/ToSelectBox';
-import CalenderSelect from '../Components/CalenderSelect/CalenderSelect';
-import PickUpTime from '../Components/PickUpTIme/PickUpTime';
-import DropTime from '../Components/DropTime/DropTime';
-import '../FormTour/FormTour.css'
+import Auxiliary from '../../hoc/Auxiliary';
+import FromSelectBox from '../SelectBox/FromSelectBox/FromSelectBox';
+import ToSelectBox from '../SelectBox/ToSelectBox/ToSelectBox';
+import CalenderSelect from '../CalenderSelect/CalenderSelect';
+import PickUpTime from '../PickUpTime/PickUpTime'
+import DropTime from '../DropTime/DropTime';
+import './FormTour.css'
 
 class FormTour extends Component {
     constructor(props) {
