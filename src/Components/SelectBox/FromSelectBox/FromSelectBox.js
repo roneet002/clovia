@@ -1,36 +1,22 @@
-import React,{Component} from 'react';
+import React from 'react';
 import Auxiliary from '../../../hoc/Auxiliary';
 
-class FromSelectBox extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {  
-        value : 'select'
- }
-    }
-   
-    selectBoxHandler=(e)=>{
-    this.setState({
-    value:e.target.value
-    })
 
-    }
+const FromSelectBox =(props)=>{
+return(
 
-    render() { 
-        return (  
 <Auxiliary>
 <label>From</label>
-<select className="form-control" value={this.state.value} onChange={this.selectBoxHandler.bind(this)}>
+<select className="form-control" value={props.value} onChange={props.FromselectValue}>
+<option value="From">From</option>
 <option value="car1">Car1</option>
 <option value="car2">Car2</option>
 <option value="car3">Car3</option>
 </select>
 </Auxiliary>
 
-        )}
+)
 }
-
-
 export default FromSelectBox;
 
 

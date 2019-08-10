@@ -11,14 +11,9 @@ class Home extends Component {
         super(props);
         this.state = { 
 
-         
         }
     }
-
-    formHandler =(event)=>{
-      console.log(this.state.value)
-      event.preventDefault()
-      }
+    
 
 
     render() { 
@@ -26,6 +21,10 @@ class Home extends Component {
 
 
 <Auxiliary>
+
+
+
+
  <FormTour />
 
 <ListingResult /><br /><br /><br /><br /><br />
