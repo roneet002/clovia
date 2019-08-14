@@ -7,7 +7,7 @@ const ToSelectBox =(props)=> {
 
 return (  
 <Auxiliary>
-<label>To</label>
+<label>{props.label}</label>
 <select className="form-control" value={props.value} onChange={props.ToSelectBox}>
 <option value="To">To</option>
 <option value="plane1">plane1</option>

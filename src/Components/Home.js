@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import FormTour from '../Components/FormTour/FormTour';
 import Auxiliary from '../hoc/Auxiliary';
-import ListingResult from './ListingResult/ListingResult';
+// import ListingResult from './ListingResult/ListingResult';
 
 
 
@@ -27,8 +27,7 @@ class Home extends Component {
 
  
  <FormTour />
-
-<ListingResult /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br />
 
 
 

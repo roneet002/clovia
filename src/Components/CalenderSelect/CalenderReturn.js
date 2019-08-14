@@ -3,15 +3,15 @@ import Auxiliary from '../../hoc/Auxiliary';
 import DatePicker from "react-datepicker"; 
 import "react-datepicker/dist/react-datepicker.css";
 
-const CalenderSelect =(props)=>{
+const CalenderReturn =(props)=>{
 return(
 <Auxiliary>
 <label>{props.label}</label>
-<DatePicker selected={props.selected} onChange={props.handleChange}
+<DatePicker selected={props.selected} onChange={props.ReturnValue}
       />
 </Auxiliary>
 )
 
 
 }
-export default CalenderSelect
+export default CalenderReturn

@@ -6,7 +6,7 @@ const FromSelectBox =(props)=>{
 return(
 
 <Auxiliary>
-<label>From</label>
+<label>{props.label}</label>
 <select className="form-control" value={props.value} onChange={props.FromselectValue}>
 <option value="From">From</option>
 <option value="car1">Car1</option>
